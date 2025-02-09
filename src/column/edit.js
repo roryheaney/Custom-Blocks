@@ -256,7 +256,18 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 
 			<div { ...blockProps } className={ previewClassString }>
-				<InnerBlocks />
+				<InnerBlocks
+					template={ [
+						[
+							'core/heading',
+							{ placeholder: 'Enter heading text...' },
+						],
+						[
+							'core/paragraph',
+							{ placeholder: 'Enter paragraph text...' },
+						],
+					] }
+				/>
 			</div>
 		</Fragment>
 	);

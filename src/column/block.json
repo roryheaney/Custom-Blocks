@@ -6,7 +6,11 @@
 	"title": "Fs Column",
 	"category": "layout",
 	"icon": "screenoptions",
-	"keywords": [ "bootstrap", "column", "layout" ],
+	"keywords": [
+		"bootstrap",
+		"column",
+		"layout"
+	],
 	"description": "A column block that can hold inner blocks.",
 	"supports": {
 		"html": false,
@@ -19,37 +23,51 @@
 		},
 		"columnOptions": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		},
 		"marginOptions": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		},
 		"displayOptions": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		},
 		"orderOptions": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		},
-		"alignItemsOptions": {
+		"selfAlignmentOptions": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		},
 		"columnOffsetOptions": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		},
 		"additionalClasses": {
 			"type": "array",
-			"items": { "type": "string" },
+			"items": {
+				"type": "string"
+			},
 			"default": []
 		}
 	},
