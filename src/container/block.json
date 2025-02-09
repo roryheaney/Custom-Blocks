@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fs-blocks/container-block",
+	"version": "0.1.0",
+	"title": "Fs Container",
+	"category": "layout",
+	"icon": "screenoptions",
+	"keywords": [
+		"bootstrap",
+		"container",
+		"layout"
+	],
+	"description": "A container block that can hold a row block.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"additionalClass": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "fs-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

@@ -1,0 +1,1 @@
+console.log("Hello World! (from fancysquares-container-block block)");
