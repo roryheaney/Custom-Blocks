@@ -57,3 +57,31 @@ function fsblocks_render_column_block( $attributes, $content ) {
 	include plugin_dir_path( __FILE__ ) . '../build/column/render.php';
 	return ob_get_clean();
 }
+
+/**
+ * Render callback for the Accordion block.
+ *
+ * @param array  $attributes The block attributes.
+ * @param string $content    The inner block markup (Accordion Item blocks).
+ * @return string            The rendered HTML.
+ */
+function fsblocks_render_accordion_block( $attributes, $content ) {
+	// If you have any specific attributes for the accordion parent, handle them here.
+	// For now, we'll just pass everything to "render.php".
+	ob_start();
+	include plugin_dir_path( __FILE__ ) . '../build/accordion/render.php';
+	return ob_get_clean();
+}
+
+/**
+ * Render callback for the Accordion Item block.
+ *
+ * @param array  $attributes The block attributes (title, clientId, etc.).
+ * @param string $content    The inner block markup (paragraphs, etc.).
+ * @return string            The rendered HTML.
+ */
+function fsblocks_render_accordion_item_block( $attributes, $content ) {
+	ob_start();
+	include plugin_dir_path( __FILE__ ) . '../build/accordion-item/render.php';
+	return ob_get_clean();
+}

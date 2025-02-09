@@ -49,5 +49,21 @@ function fancysquares_fs_blocks_block_init() {
 			'render_callback' => 'fsblocks_render_column_block',
 		)
 	);
+
+	// accordion (parent) block
+	register_block_type(
+		__DIR__ . '/build/accordion',
+		array(
+			'render_callback' => 'fsblocks_render_accordion_block', // function in render-callbacks.php
+		)
+	);
+
+	// accordion item (child) block
+	register_block_type(
+		__DIR__ . '/build/accordion-item',
+		array(
+			'render_callback' => 'fsblocks_render_accordion_item_block',
+		)
+	);
 }
 add_action( 'init', 'fancysquares_fs_blocks_block_init' );
