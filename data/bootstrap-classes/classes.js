@@ -1,11 +1,23 @@
- // options.js
+// options.js
 export const exoticColumnOptions = [
 	{ label: 'Bleed Left LG', value: 'bs-g-col-negative-left-margin' },
-	{ label: 'Bleed Left LG - Full MD Down', value: 'bs-g-col-negative-left-margin bs-g-col-negative-left-margin--full-md-down' },
-	{ label: 'Bleed Left LG - Full LG Down', value: 'bs-g-col-negative-left-margin bs-g-col-negative-left-margin--full-lg-down' },
+	{
+		label: 'Bleed Left LG - Full MD Down',
+		value: 'bs-g-col-negative-left-margin bs-g-col-negative-left-margin--full-md-down',
+	},
+	{
+		label: 'Bleed Left LG - Full LG Down',
+		value: 'bs-g-col-negative-left-margin bs-g-col-negative-left-margin--full-lg-down',
+	},
 	{ label: 'Bleed Right LG', value: 'bs-g-col-negative-right-margin' },
-	{ label: 'Bleed Right LG - Full MD Down', value: 'bs-g-col-negative-right-margin bs-g-col-negative-right-margin--full-md-down' },
-	{ label: 'Bleed Right LG - Full LG Down', value: 'bs-g-col-negative-right-margin bs-g-col-negative-right-margin--full-lg-down' },
+	{
+		label: 'Bleed Right LG - Full MD Down',
+		value: 'bs-g-col-negative-right-margin bs-g-col-negative-right-margin--full-md-down',
+	},
+	{
+		label: 'Bleed Right LG - Full LG Down',
+		value: 'bs-g-col-negative-right-margin bs-g-col-negative-right-margin--full-lg-down',
+	},
 ];
 
 export const columnOptions = [
@@ -789,12 +801,27 @@ export const justifyContentOptions = [
 	{ label: 'justify-content-md-center', value: 'justify-content-md-center' },
 	{ label: 'justify-content-lg-center', value: 'justify-content-lg-center' },
 	{ label: 'justify-content-xl-center', value: 'justify-content-xl-center' },
-	{ label: 'justify-content-xxl-center', value: 'justify-content-xxl-center' },
+	{
+		label: 'justify-content-xxl-center',
+		value: 'justify-content-xxl-center',
+	},
 	{ label: 'justify-content-between', value: 'justify-content-between' },
-	{ label: 'justify-content-md-between', value: 'justify-content-md-between' },
-	{ label: 'justify-content-lg-between', value: 'justify-content-lg-between' },
-	{ label: 'justify-content-xl-between', value: 'justify-content-xl-between' },
-	{ label: 'justify-content-xxl-between', value: 'justify-content-xxl-between' },
+	{
+		label: 'justify-content-md-between',
+		value: 'justify-content-md-between',
+	},
+	{
+		label: 'justify-content-lg-between',
+		value: 'justify-content-lg-between',
+	},
+	{
+		label: 'justify-content-xl-between',
+		value: 'justify-content-xl-between',
+	},
+	{
+		label: 'justify-content-xxl-between',
+		value: 'justify-content-xxl-between',
+	},
 ];
 export const alignItemsOptions = [
 	// align-items-start and its media-query values
@@ -873,7 +900,7 @@ export const orderOptions = [
 	{ label: 'order-xl-first', value: 'order-xl-first' },
 	{ label: 'order-xl-last', value: 'order-xl-last' },
 	{ label: 'order-xxl-first', value: 'order-xxl-first' },
-	{ label: 'order-xxl-last', value: 'order-xxl-last' }
+	{ label: 'order-xxl-last', value: 'order-xxl-last' },
 ];
 
 export const columnOffsetOptions = [

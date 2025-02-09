@@ -1,12 +1,12 @@
 import {
 	InspectorControls,
 	InnerBlocks,
-	useBlockProps
+	useBlockProps,
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
 	SelectControl,
-	FormTokenField
+	FormTokenField,
 } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import { Fragment } from '@wordpress/element';
@@ -14,7 +14,7 @@ import { Fragment } from '@wordpress/element';
 const singleChoiceOptions = [
 	{ label: __( 'Default', 'fs-blocks' ), value: '' },
 	{ label: __( 'Test', 'fs-blocks' ), value: 'test' },
-	{ label: __( 'Fancy', 'fs-blocks' ), value: 'fancy' }
+	{ label: __( 'Fancy', 'fs-blocks' ), value: 'fancy' },
 ];
 
 // Import everything you need:
@@ -30,12 +30,12 @@ import {
 import './editor.scss';
 
 // Convert each array of { label, value } to just [ 'col', 'col-auto', ... ] for FormTokenField suggestions.
-const columnSuggestions       = columnOptions.map( (o) => o.value );
-const marginSuggestions       = marginOptions.map( (o) => o.value );
-const displaySuggestions      = displayOptions.map( (o) => o.value );
-const orderSuggestions        = orderOptions.map( (o) => o.value );
-const alignItemsSuggestions   = selfAlignmentOptions.map( (o) => o.value );
-const columnOffsetSuggestions = columnOffsetOptions.map( (o) => o.value );
+const columnSuggestions = columnOptions.map( ( o ) => o.value );
+const marginSuggestions = marginOptions.map( ( o ) => o.value );
+const displaySuggestions = displayOptions.map( ( o ) => o.value );
+const orderSuggestions = orderOptions.map( ( o ) => o.value );
+const alignItemsSuggestions = selfAlignmentOptions.map( ( o ) => o.value );
+const columnOffsetSuggestions = columnOffsetOptions.map( ( o ) => o.value );
 
 // Merge everything into one final array
 function combineAllClasses(
@@ -180,7 +180,7 @@ export default function Edit( { attributes, setAttributes } ) {
 	// Combine everything for the editor preview
 	const previewClassString = [
 		'wp-block-fancysquares-column-block',
-		...additionalClasses
+		...additionalClasses,
 	].join( ' ' );
 
 	const blockProps = useBlockProps();
@@ -188,7 +188,10 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody title={ __( 'Column Settings', 'fs-blocks' ) } initialOpen={ true }>
+				<PanelBody
+					title={ __( 'Column Settings', 'fs-blocks' ) }
+					initialOpen={ true }
+				>
 					<SelectControl
 						label={ __( 'Singular Select Class', 'fs-blocks' ) }
 						value={ singularSelectClass }

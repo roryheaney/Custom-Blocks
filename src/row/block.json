@@ -6,11 +6,7 @@
 	"title": "Fs Row",
 	"category": "layout",
 	"icon": "screenoptions",
-	"keywords": [
-		"bootstrap",
-		"row",
-		"layout"
-	],
+	"keywords": [ "bootstrap", "row", "layout" ],
 	"description": "A row block that can hold a column or grid block.",
 	"supports": {
 		"html": false,

@@ -6,11 +6,7 @@
 	"title": "Fs Container",
 	"category": "layout",
 	"icon": "screenoptions",
-	"keywords": [
-		"bootstrap",
-		"container",
-		"layout"
-	],
+	"keywords": [ "bootstrap", "container", "layout" ],
 	"description": "A container block that can hold a row block.",
 	"supports": {
 		"html": false,

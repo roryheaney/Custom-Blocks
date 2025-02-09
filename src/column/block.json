@@ -6,11 +6,7 @@
 	"title": "Fs Column",
 	"category": "layout",
 	"icon": "screenoptions",
-	"keywords": [
-		"bootstrap",
-		"column",
-		"layout"
-	],
+	"keywords": [ "bootstrap", "column", "layout" ],
 	"description": "A column block that can hold inner blocks.",
 	"supports": {
 		"html": false,
