@@ -7,3 +7,12 @@
 .wp-block-fancysquares-column-block {
 	border: 1px dotted #f00;
 }
+[data-type="fs-blocks/column-block"] {
+	> div {
+		width: 100%;
+		// padding: 0 15px;
+		> .block-editor-inner-blocks {
+			width: 100%;
+		}
+	}
+}

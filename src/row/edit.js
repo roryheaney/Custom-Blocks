@@ -5,7 +5,7 @@ import {
 } from '@wordpress/block-editor';
 import { PanelBody, FormTokenField } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { Fragment } from '@wordpress/element';
+import { Fragment, useEffect } from '@wordpress/element';
 import './editor.scss';
 
 // Import your class definition arrays
@@ -52,10 +52,10 @@ function combineAllClasses(
 	];
 }
 
-// Define which child blocks are allowed (as in your original code).
+// Define which child blocks are allowed.
 const ALLOWED_BLOCKS = [ 'fs-blocks/column-block' ];
 
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( { attributes, setAttributes, clientId } ) {
 	const {
 		rowOptions: rowValues,
 		justifyContentOptions: justifyValues,
@@ -65,7 +65,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		additionalClasses,
 	} = attributes;
 
-	// For each token field, when it changes, update that part's attribute + re-merge everything.
+	// For each token field, update its attribute + re-merge everything.
 	const onChangeRowOptions = ( newTokens ) => {
 		setAttributes( { rowOptions: newTokens } );
 		const merged = combineAllClasses(
@@ -126,13 +126,43 @@ export default function Edit( { attributes, setAttributes } ) {
 		setAttributes( { additionalClasses: merged } );
 	};
 
-	// For the editor preview, we can combine a base class + the final `additionalClasses`.
-	// You might always want "row" as a base class.
+	/**
+	 * The preview class for our main <div> in the editor.
+	 * Always "row" + the user-chosen classes.
+	 */
 	const previewClassString = [
 		'wp-block-fancysquares-row-block',
 		'row',
 		...additionalClasses,
 	].join( ' ' );
+
+	/**
+	 * Whenever additionalClasses changes, update the row classes on the
+	 * "layout" container for this specific block ID.
+	 */
+	useEffect( () => {
+		const adminBlock = document.querySelector(
+			`.wp-block-fancysquares-row-block[data-block="${ clientId }"]`
+		);
+
+		const layoutEl = document.querySelector(
+			`.wp-block-fancysquares-row-block[data-block="${ clientId }"] > .block-editor-inner-blocks > .block-editor-block-list__layout`
+		);
+
+		// console.log( 'Layout Element from query:', layoutEl );
+		if ( layoutEl ) {
+			// We'll merge the "row" + our additional classes into one string.
+			const mergedEditorClasses = [
+				'block-editor-block-list__layout',
+				'wp-block-fancysquares-row-block',
+				'row',
+				...additionalClasses,
+			].join( ' ' );
+			layoutEl.className = mergedEditorClasses;
+
+			adminBlock.className = 'wp-block-fancysquares-row-block-admin';
+		}
+	}, [ additionalClasses, clientId ] );
 
 	const blockProps = useBlockProps();
 
@@ -149,28 +179,24 @@ export default function Edit( { attributes, setAttributes } ) {
 						suggestions={ rowSuggestions }
 						onChange={ onChangeRowOptions }
 					/>
-
 					<FormTokenField
 						label={ __( 'Justify Content Classes', 'fs-blocks' ) }
 						value={ justifyValues }
 						suggestions={ justifyContentSuggestions }
 						onChange={ onChangeJustifyContentOptions }
 					/>
-
 					<FormTokenField
 						label={ __( 'Align Items Classes', 'fs-blocks' ) }
 						value={ alignValues }
 						suggestions={ alignItemsSuggestions }
 						onChange={ onChangeAlignItemsOptions }
 					/>
-
 					<FormTokenField
 						label={ __( 'Margin Classes', 'fs-blocks' ) }
 						value={ marginValues }
 						suggestions={ marginSuggestions }
 						onChange={ onChangeMarginOptions }
 					/>
-
 					<FormTokenField
 						label={ __( 'Padding Classes', 'fs-blocks' ) }
 						value={ paddingValues }
