@@ -19,4 +19,4 @@ This plugin currently add's the css/js to the FE as well, but only for testing p
 
 
 #### PR's welcome
-You just read, feel free to chime in, we are better together.
+Feel free to chime in, we are better together.
