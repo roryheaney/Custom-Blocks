@@ -7,9 +7,16 @@ That being said, you could change the classes being used inside the data folder 
 These blocks are set up and created using `@wordpress/create-block` and the `dynamic` variant.
 
 ## Admin settings
-The plugin includes an option to yes or now to using Bootstrap 5.  If you  select Bootstrap, it will add the Bootstrap 5 JS/CSS to the admin. You'll notice when you use blocks like `accordion`, it will work in the admin.
+The plugin includes an option to yes or now to using Bootstrap 5.  If you select Bootstrap, it will add the Bootstrap 5 JS/CSS to the admin. You'll notice when you use blocks like `accordion`, it will work in the admin.
 
 This plugin currently add's the css/js to the FE as well, but only for testing purposes.
+
+### Currently includes
+- Container
+- Row
+- Column
+- Accordions
+- Modals
 
 ### Road Map
 - Add an option to add the js/css or them individually to the FE of the site.
