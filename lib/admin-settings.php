@@ -128,3 +128,23 @@ function fancysquares_fs_blocks_enqueue_editor_assets( $hook ) {
 	}
 }
 add_action( 'admin_enqueue_scripts', 'fancysquares_fs_blocks_enqueue_editor_assets' );
+/**
+ * Enqueue Bootstrap on the front end of the site.
+ */
+function fancysquares_fs_blocks_enqueue_frontend() {
+	wp_enqueue_style(
+		'fancysquares-bootstrap5',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+		array(),
+		'5.3.3'
+	);
+
+	wp_enqueue_script(
+		'fancysquares-bootstrap5',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+		array(),
+		'5.3.3',
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'fancysquares_fs_blocks_enqueue_frontend' );

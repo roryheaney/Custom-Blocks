@@ -85,3 +85,21 @@ function fsblocks_render_accordion_item_block( $attributes, $content ) {
 	include plugin_dir_path( __FILE__ ) . '../build/accordion-item/render.php';
 	return ob_get_clean();
 }
+
+/**
+ * Render callback for the Modal Button block.
+ */
+function fsblocks_render_modal_button_block( $attributes, $content ) {
+	ob_start();
+	include plugin_dir_path( __FILE__ ) . '../build/modal-button/render.php';
+	return ob_get_clean();
+}
+
+/**
+ * Render callback for the Modal block.
+ */
+function fsblocks_render_modal_block( $attributes, $content ) {
+	ob_start();
+	include plugin_dir_path( __FILE__ ) . '../build/modal/render.php';
+	return ob_get_clean();
+}
