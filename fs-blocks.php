@@ -65,5 +65,21 @@ function fancysquares_fs_blocks_block_init() {
 			'render_callback' => 'fsblocks_render_accordion_item_block',
 		)
 	);
+
+	// modal-button
+	register_block_type(
+		__DIR__ . '/build/modal-button',
+		array(
+			'render_callback' => 'fsblocks_render_modal_button_block',
+		)
+	);
+
+	// modal
+	register_block_type(
+		__DIR__ . '/build/modal',
+		array(
+			'render_callback' => 'fsblocks_render_modal_block',
+		)
+	);
 }
 add_action( 'init', 'fancysquares_fs_blocks_block_init' );

@@ -10,8 +10,6 @@ import { dispatch } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 export default function Edit( { attributes, setAttributes, clientId } ) {
-	const { title } = attributes;
-
 	// If there's no stored clientId, set it.
 	useEffect( () => {
 		if ( ! attributes.clientId ) {
