@@ -13,7 +13,7 @@ This plugin currently add's the css/js to the FE as well, but only for testing p
 
 ### Road Map
 - Add an option to add the js/css or them individually to the FE of the site.
-- More blocks (caroules, alerts, etc)
+- More blocks (carousels, alerts, etc)
 - ADA enhancements.
 - Other frameworks (Tailwind, Material, etc).
 
